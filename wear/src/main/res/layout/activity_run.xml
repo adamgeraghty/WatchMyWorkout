@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_navy">
+
+    <TextView android:id="@+id/trackRun" app:layout_box="all" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Track Run"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="29dp"
+        style="@style/TextAppearance.Wearable.Large"
+        android:textColor="@color/app_red"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="68dp"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/btn_start"
+        android:onClick="btnBeginRecording"
+        android:layout_marginBottom="38dp"
+        android:layout_marginLeft="18dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0km"
+        android:id="@+id/distanceRun"
+        android:layout_below="@+id/trackRun"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/app_red" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0m"
+        android:id="@+id/metersRun"
+        android:layout_below="@+id/distanceRun"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/app_red" />
+
+
+</RelativeLayout>

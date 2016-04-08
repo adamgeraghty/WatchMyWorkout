@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.n00120191.adam.watchmyworkout.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="John Doley"
+        android:id="@+id/username"
+        android:textColor="@color/app_navy"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="bold"
+        android:textAllCaps = "true"
+        android:textSize="@dimen/abc_text_size_large_material" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Last updated, 16 Jan 2016"
+        android:id="@+id/lastUpdated"
+        android:layout_below="@+id/username"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/abc_text_size_body_1_material" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/dataVisChart"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/lastUpdated"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <RelativeLayout
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_below="@+id/dataVisChart"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:background="@color/app_red"
+        android:onClick="setSchedBtn"
+        android:id="@+id/relativeLayout1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:text="Schedule"
+            android:id="@+id/nextGoal"
+            android:textColor="@color/app_white"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Edit Schedule?"
+            android:id="@+id/newGoal"
+            android:textColor="@color/app_navy"
+            android:layout_below="@+id/nextGoal"
+            android:layout_alignStart="@+id/nextGoal"
+            android:layout_marginTop="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:onClick=""
+        android:id="@+id/relativeLayout2"
+        android:layout_alignTop="@+id/relativeLayout1"
+        android:layout_alignEnd="@+id/dataVisChart">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0"
+            android:id="@+id/avgMilesData"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="0dp"
+            android:textColor="@color/app_navy"
+            android:textStyle="bold"
+            android:textSize="35dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Avg. miles"
+            android:id="@+id/textView"
+            android:layout_alignTop="@+id/avgMilesData"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/app_navy"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0"
+            android:id="@+id/avgRepsData"
+            android:textColor="@color/app_navy"
+            android:textStyle="bold"
+            android:textSize="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/avgMilesData" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Avg. reps"
+            android:id="@+id/avgRepsTxt"
+            android:textColor="@color/app_navy"
+            android:layout_alignTop="@+id/avgRepsData"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

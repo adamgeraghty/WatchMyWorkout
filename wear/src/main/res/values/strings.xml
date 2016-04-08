@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">WatchMyWorkout</string>
+
+    <color name="app_red">#e74c3c</color>
+    <color name="app_navy">#2c3e50</color>
+</resources>
